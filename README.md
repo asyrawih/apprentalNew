@@ -15,5 +15,5 @@
     * [] Di FrontEnd Tolong Buat Cek Validasi Ketika Sudah Login
 
 ## BackEnd NoT Done 
-    * [] create Table transaksi
+    * [*] create Table transaksi
     * [] Schema Table Transaksi  [ id , uuid , jenis_mobil , owner  ] NOTE : Table ini Tidak      berelasi    
