@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "296794484639",
+    "firebase_url": "https://apprental-93f7f.firebaseio.com",
+    "project_id": "apprental-93f7f",
+    "storage_bucket": "apprental-93f7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296794484639:android:909495cda232289c7fd7aa",
+        "android_client_info": {
+          "package_name": "com.example.apprental"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296794484639-98todphs0c7bqbl3tou9elj7a5t6tr58.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.apprental",
+            "certificate_hash": "2bd416cf86820b60cd586e43641960c1d8529403"
+          }
+        },
+        {
+          "client_id": "296794484639-sb70mme8dp22c0i73d9pmrv5ok1i83pf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.apprental",
+            "certificate_hash": "61660c147494830a044574510f836d6a2fd027e2"
+          }
+        },
+        {
+          "client_id": "296794484639-g61ifqb2rdepji6glm91f56kvfde8285.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOQh8ETjljync5vSyed53YOGLMCb8CKuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296794484639-g61ifqb2rdepji6glm91f56kvfde8285.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
