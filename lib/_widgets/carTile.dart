@@ -13,7 +13,7 @@ class CarTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
       leading: Container(
         padding: EdgeInsets.only(right: 12.0),
         decoration: BoxDecoration(
@@ -24,7 +24,7 @@ class CarTile extends StatelessWidget {
         child: Icon(Icons.directions_car, color: Colors.white),
       ),
       title: Text(
-        jenis,
+        jenis.toUpperCase(),
         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
       ),
       subtitle: Row(
@@ -38,11 +38,11 @@ class CarTile extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
           SizedBox(
-            width: 10.0,
+            width: 15.0,
           ),
           Icon(Icons.color_lens, color: Colors.yellowAccent),
           Text(
-            ' ' + warna,
+            ' ' + warna.toUpperCase(),
             style: TextStyle(color: Colors.white),
           )
         ],
