@@ -50,7 +50,7 @@ class _AuthGoogleState extends State<AuthGoogle> {
               height: 300,
               width: 300,
               child: Image.asset(
-                "assets/images/icon.jpg",
+                "assets/images/icon.png",
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30.0),

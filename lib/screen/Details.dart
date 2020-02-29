@@ -1,4 +1,5 @@
 import 'package:apprental/model/CarsModel.dart';
+import 'package:apprental/screen/TransactionScreen.dart';
 import 'package:flutter/material.dart';
 
 class Details extends StatelessWidget {
@@ -45,36 +46,48 @@ class Details extends StatelessWidget {
                   SizedBox(
                     height: 30,
                   ),
-                  Container(
-                    margin: EdgeInsets.only(left: 150, right: 150),
-                    height: 50,
-                    width: 30,
-                    decoration: BoxDecoration(
-                        color: Color.fromRGBO(58, 66, 87, 1.0),
-                        borderRadius: BorderRadius.circular(10.0),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black26,
-                              blurRadius: 20,
-                              offset: Offset(2, 0))
-                        ]),
-                    child: Center(
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 3.0,
+                  new InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => new TransactionScreen(
+                            cars: cars,
                           ),
-                          Icon(
-                            Icons.shopping_basket,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            "Pesan",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800),
-                          ),
-                        ],
+                        ),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(left: 150, right: 150),
+                      height: 50,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(58, 66, 87, 1.0),
+                          borderRadius: BorderRadius.circular(10.0),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 20,
+                                offset: Offset(2, 0))
+                          ]),
+                      child: Center(
+                        child: Column(
+                          children: <Widget>[
+                            SizedBox(
+                              height: 3.0,
+                            ),
+                            Icon(
+                              Icons.shopping_basket,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              "Pesan",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w800),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color.fromRGBO(58, 66, 86, 1.0),
       ),
       home: AuthGoogle(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -5,7 +5,9 @@ import 'package:apprental/screen/OrderScreen.dart';
 import 'package:apprental/services/sign_in.dart';
 import 'package:apprental/ui/auth.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,6 +15,41 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  FirebaseUser user;
+
+  PermissionStatus _permissionStatus;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    initUser();
+    PermissionHandler()
+        .checkPermissionStatus(PermissionGroup.storage)
+        .then(_updateStatus);
+
+    PermissionHandler().requestPermissions(
+        [PermissionGroup.locationWhenInUse]).then(_onStatusRequest);
+  }
+
+  void _updateStatus(PermissionStatus status) {
+    if (status != _permissionStatus) {
+      setState(() {
+        _permissionStatus = status;
+      });
+    }
+  }
+
+  void _onStatusRequest(Map<PermissionGroup, PermissionStatus> statusRequest) {
+    final status = statusRequest[PermissionGroup.locationWhenInUse];
+    _updateStatus(status);
+  }
+
+  initUser() async {
+    user = await _auth.currentUser();
+  }
+
   var currentPage = 0;
   GlobalKey bottomNavigationKey = GlobalKey();
   String tes = 'hallo';
@@ -59,12 +96,12 @@ class _HomePageState extends State<HomePage> {
                       height: 100,
                       width: 100,
                       child: CircleAvatar(
-                        backgroundImage: NetworkImage(imageUrl),
+                        backgroundImage: NetworkImage("${user?.photoUrl}"),
                       ),
                     ),
                   ),
                   Text(
-                    name,
+                    "${user?.displayName}",
                     style: TextStyle(color: Colors.white),
                   )
                 ],
