@@ -68,7 +68,7 @@ class CarsList extends StatelessWidget {
 
   Widget _buildContainerListTransaction(items, index, context) {
     return new InkWell(
-      onLongPress: () {
+      onTap: () {
         showDialog(
           context: context,
           builder: (BuildContext context) {
@@ -78,6 +78,7 @@ class CarsList extends StatelessWidget {
                 children: <Widget>[
                   new IconButton(
                     icon: new Icon(Icons.message),
+                    tooltip: 'Call Owner',
                     onPressed: _launchURL,
                   ),
                   new IconButton(
@@ -138,7 +139,7 @@ class CarsList extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(
-                        'Yudha Islami Sulistya',
+                        'History Pemesanan',
                         style: GoogleFonts.raleway(
                           textStyle: new TextStyle(
                             color: Colors.white,

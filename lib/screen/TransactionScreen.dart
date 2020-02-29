@@ -1,6 +1,7 @@
 import 'package:apprental/model/CarsModel.dart';
 import 'package:apprental/model/TransactionModel.dart';
 import 'package:apprental/services/CarsServices.dart';
+import 'package:apprental/services/sign_in.dart';
 import 'package:apprental/ui/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,7 +10,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:progress_dialog/progress_dialog.dart';
 
 class TransactionScreen extends StatefulWidget {
-  final Cars cars;
+  final Cars cars; 
   TransactionScreen({this.cars});
   @override
   _TransactionScreenState createState() => _TransactionScreenState();
@@ -17,6 +18,7 @@ class TransactionScreen extends StatefulWidget {
 
 class _TransactionScreenState extends State<TransactionScreen> {
   dynamic long, lat;
+  
   Completer<GoogleMapController> _controller = Completer();
   final Set<Marker> _markers = {};
   static final CameraPosition _kGooglePlex = CameraPosition(
@@ -24,12 +26,12 @@ class _TransactionScreenState extends State<TransactionScreen> {
     zoom: 14.4746,
   );
 
-  static final CameraPosition _kLake = CameraPosition(
-    bearing: 192.8334901395799,
-    target: LatLng(-5.1326326, 119.4463043),
-    tilt: 59.440717697143555,
-    zoom: 19.151926040649414,
-  );
+  // static final CameraPosition _kLake = CameraPosition(
+  //   bearing: 192.8334901395799,
+  //   target: LatLng(-5.1326326, 119.4463043),
+  //   tilt: 59.440717697143555,
+  //   zoom: 19.151926040649414,
+  // );
 
   ProgressDialog pr;
 
@@ -107,7 +109,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
             print(lat);
             print(long);
             TransactionPost newTransaction = new TransactionPost(
-                uuid: "12345",
+                uuid: uid,
                 jenis: widget.cars.jenis,
                 latitude: lat.toString(),
                 longitude: long.toString());

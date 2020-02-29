@@ -17,18 +17,18 @@ class _DetailMapScreenState extends State<DetailMapScreen> {
   static dynamic long, lat;
   List<Marker> allMarkers = [];
   Completer<GoogleMapController> _controller = Completer();
-  final Set<Marker> _markers = {};
+  // final Set<Marker> _markers = {};
   static final CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(lat, long),
     zoom: 14.4746,
   );
 
-  static final CameraPosition _kLake = CameraPosition(
-    bearing: 192.8334901395799,
-    target: LatLng(-5.1326326, 119.4463043),
-    tilt: 59.440717697143555,
-    zoom: 19.151926040649414,
-  );
+  // static final CameraPosition _kLake = CameraPosition(
+  //   bearing: 192.8334901395799,
+  //   target: LatLng(-5.1326326, 119.4463043),
+  //   tilt: 59.440717697143555,
+  //   zoom: 19.151926040649414,
+  // );
 
   @override
   void initState() {
