@@ -12,7 +12,8 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="apprental"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/appicon"
+    >
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

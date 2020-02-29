@@ -85,6 +85,7 @@ class _DetailMapScreenState extends State<DetailMapScreen> {
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
         onPressed: () async {
+          print(widget.transaction.latitude);
           String googleUrl =
               'https://www.google.com/maps/search/?api=1&query=${widget.transaction.latitude},${widget.transaction.longitude}';
           if (await canLaunch(googleUrl)) {
