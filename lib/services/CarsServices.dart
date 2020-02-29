@@ -23,7 +23,7 @@ Future<List<Cars>> fetchCars(http.Client client) async {
 
 Future<List<Transaction>> fetchTransaction(http.Client client) async {
   print('uid dari user ${uid.toString()}');
-  final response = await client.get('https://irent.id/api/v1/transaksi');
+  final response = await client.get('https://irent.id/api/v1/transaksi/${uid.toString()}');
   return compute(parseTransaction, response.body);
 }
 

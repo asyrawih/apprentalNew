@@ -15,7 +15,7 @@
     * [] Di FrontEnd Tolong Buat Cek Validasi Ketika Sudah Login
 
 ## BackEnd TODO 
-    * [x] create Table transaksi 🏩 
+    * [x] create Table transaksi 🏩🚨
     * [x] Schema Table Transaksi  [ id , uuid , jenis_mobil , owner  ] NOTE : Table ini Tidak berelasi 
     * [x] Route Transaksi  🏩 
     * [x] http://irent.id/api/v1/transaksi
@@ -32,3 +32,5 @@
 ## TODO Yang Mau Di Kerjakan Lagi :smile:  😄 
     * [] Perbaruhi Ui home Screen Agar Lebih Menarik 🏩 
     * [] Sertakan Optional Content Di Home Screen 🏩 
+    * [*] get history Pemesanan Berdasarkan UID login
+    
