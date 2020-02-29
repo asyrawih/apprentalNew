@@ -8,7 +8,8 @@ class Details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+      // backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+      backgroundColor: Colors.greenAccent,
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -30,7 +31,8 @@ class Details extends StatelessWidget {
                   topLeft: Radius.circular(10.0),
                   topRight: Radius.circular(10.0),
                 ),
-                color: Color.fromRGBO(58, 66, 86, 1.0),
+                // color: Color.fromRGBO(58, 66, 86, 1.0),
+                color: Colors.greenAccent
               ),
               child: ListView(
                 controller: controller,
@@ -152,7 +154,8 @@ class ListCarsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color.fromRGBO(58, 66, 86, 1.0),
+      // color: Color.fromRGBO(58, 66, 86, 1.0),
+      color: Colors.greenAccent,
       elevation: 10,
       child: ListTile(
         leading: Icon(

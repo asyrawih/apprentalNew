@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Irent',
       theme: ThemeData(
-        primaryColor: Color.fromRGBO(58, 66, 86, 1.0),
+        // primaryColor: Color.fromRGBO(58, 66, 86, 1.0),
+        primaryColor: Colors.greenAccent
       ),
       home: AuthGoogle(),
       debugShowCheckedModeBanner: false,

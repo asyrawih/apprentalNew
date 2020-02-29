@@ -112,9 +112,20 @@ class CarsList extends StatelessWidget {
         margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
         padding: const EdgeInsets.all(5),
         decoration: new BoxDecoration(
-          color: Color.fromRGBO(64, 75, 96, .9),
-          borderRadius: BorderRadius.circular(10),
-        ),
+            // color: Color.fromRGBO(64, 75, 96, .9),
+            color: Colors.greenAccent,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black26,
+                blurRadius: .5, // has the effect of softening the shadow
+                spreadRadius: .1, // has the effect of extending the shadow
+                offset: Offset(
+                  1, // horizontal, move right 10
+                  2.0, // vertical, move down 10
+                ),
+              )
+            ]),
         child: new Column(
           children: <Widget>[
             Padding(

@@ -56,7 +56,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+      // backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+      backgroundColor: Colors.greenAccent,
       appBar: topAppBar,
       body: _getPage(currentPage),
       bottomNavigationBar: FancyBottomNavigation(
@@ -70,10 +71,12 @@ class _HomePageState extends State<HomePage> {
         ],
         initialSelection: 0,
         key: bottomNavigationKey,
-        barBackgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+        // barBackgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+        barBackgroundColor: Colors.white,
         circleColor: Colors.white70,
-        inactiveIconColor: Colors.white,
-        textColor: Colors.white,
+        inactiveIconColor: Colors.greenAccent,
+        activeIconColor: Colors.greenAccent,
+        textColor: Colors.black,
         onTabChangedListener: (posisi) {
           setState(() {
             currentPage = posisi;
@@ -82,7 +85,8 @@ class _HomePageState extends State<HomePage> {
       ),
       drawer: Drawer(
         child: Container(
-          color: Color.fromRGBO(58, 66, 86, 1.0),
+          // color: Color.fromRGBO(58, 66, 86, 1.0),
+          color: Colors.greenAccent,
           child: ListView(
             children: <Widget>[
               Column(
@@ -134,9 +138,9 @@ class _HomePageState extends State<HomePage> {
 _getPage(int page) {
   switch (page) {
     case 0:
-      return CarScreen();
-    case 1:
       return OrderScreen();
+    case 1:
+      return CarScreen();
     case 2:
       return ContactScreen();
   }

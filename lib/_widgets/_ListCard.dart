@@ -8,10 +8,11 @@ class ListCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 8.0,
+      elevation: 10.0,
       margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
       child: Container(
-        decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
+        // decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
+        decoration: BoxDecoration(color: Colors.greenAccent),
         child: CarTile(
           jenis: cars[urut].jenis,
           warna: cars[urut].warna,
